@@ -1,0 +1,133 @@
+{
+    "from_sys_cd": "eCRM",
+    "from_transmission_datetime": "20211125134000",
+    "from_data_lastupdated": "20211015134000",
+    "user_id": "123456",
+    "dataset_id": "CSMS_M06_L0_CSMS_T0000001",
+    "dataset_major_ver": "0",
+    "dataset_minor_ver": "1",
+    "request_id": "",
+    "request_type_cd": "S",
+    "actual_user_id": "223344",
+    "usage_system_cd": "10003",
+    "usage_datetime": "20211129143000",
+    "usage_data_start_date": "20211029",
+    "usage_data_end_date": "20211129",
+    "business_function_cd": "RRF02",
+    "purpose_of_use1_cd": "USAGE_PURPOSE_DEVELOPMENT_SERVICE",
+    "purpose_of_use2_cd": "USAGE_PURPOSE_DEVELOPMENT_SERVICE_02",
+    "using_pattern_cd": "UF04",
+    "usage_data_cd": "UD01",
+    "items": [
+        {
+            "item_cd": "CATEGORY_NAME",
+            "personal_info_yn": "N",
+            "pseudonym_info_yn": "N"
+        },
+        {
+            "item_cd": "CREATE_DT",
+            "personal_info_yn": "N",
+            "pseudonym_info_yn": "N"
+        },
+        {
+            "item_cd": "DEICE_ID",
+            "personal_info_yn": "Y",
+            "pseudonym_info_yn": "N"
+        }
+    ]
+}
+
+161. 제3자 제공 데이터 정보 저장
+https://dv-dlmsuprapi.lge.com/api/v1/policy/third-usage-info
+{
+    "from_sys_cd": "eCRM",
+    "from_transmission_datetime": "20211125134000",
+    "from_data_lastupdated": "20211015134000",
+    "user_id": "123456",
+    "dataset_id": "CU_DD_0000006",
+    "dataset_major_ver": "0",
+    "dataset_minor_ver": "1",
+    "request_id": "1000",
+    "usage_system_cd": "10003",
+    "third_usage_name": "제3자활용처_테스트1",
+    "third_delivery_date": "20220222",
+    "third_usage_expire_date": "20220224",
+    "forwarder_user_id": "131313",
+    "items":
+     [
+             {
+                "item_cd": "CATEGORY_NAME",
+                "personal_info_yn": "N",
+                "pseudonym_info_yn": "N"
+            },
+            {
+                "item_cd": "CREATE_DT",
+                "personal_info_yn": "N",
+                "pseudonym_info_yn": "N"
+            },
+            {
+                "item_cd": "DEICE_ID",
+                "personal_info_yn": "Y",
+                "pseudonym_info_yn": "N"
+            }
+            ]
+    }
+
+    162. 제3자 제공 데이터 폐기 확인 정보 저장
+    https://dv-dlmsuprapi.lge.com/api/v1/policy/third-disuse-info
+    {
+        "from_sys_cd" : "eCRM",
+        "from_transmission_datetime" : "20211125134000",
+        "from_data_lastupdated" : "20211015134000",
+        "user_id" : "123456",
+        "dataset_id" : "DD_PDT_10288_C",
+        "dataset_major_ver" : "0",
+        "dataset_minor_ver" : "1",
+        "request_id" : "",
+        "usage_system_cd" : "10003",
+        "third_usage_name" : "제3자활용처_테스트1",
+        "third_delivery_date" : "20220222",
+        "third_usage_expire_date" : "20220224",
+        "disposal_user_id" : "242424",
+        "expire_confirm_status_cd" : "COMPLETED",
+        "expire_confirm_date" : "20220225",
+        "items" : 
+        [
+            {
+                "item_cd" : "CATEGORY_NAME",
+                "personal_info_yn" : "N",
+                "pseudonym_info_yn" : "N"
+            },
+            {
+                "item_cd" : "CREATE_DT",
+                "personal_info_yn" : "N",
+                "pseudonym_info_yn" : "N"
+            },
+            {
+                "item_cd" : "DEICE_ID",
+                "personal_info_yn" : "Y",
+                "pseudonym_info_yn" : "N"
+            }
+        ]
+    }			    
+
+
+    164. 데이터 제공 중단 요청 정보 저장    
+    https://dv-dlmsuprapi.lge.com/api/v1/policy/download-stop
+    {
+        "from_sys_cd" : "eCRM",
+        "from_transmission_datetime" : "20211125134000",
+        "from_data_lastupdated" : "20211015134000",
+        "user_id" : "123456",
+        "dataset_id" : "DD_PDT_10288_C",
+        "dataset_major_ver" : "0",
+        "dataset_minor_ver" : "1",
+        "request_id" : "",
+        "usage_system_cd" : "10067",
+        "stop_request_type_cd" : "DATASET",
+        "stop_datetime" : "20220225171000",
+        "change_reason_cd" : "HACKING",
+        "change_update_datetime" : "20220225172000",
+        "change_content" : "prohibition"
+    }
+		
