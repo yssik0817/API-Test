@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "ad1c8e35-fba2-40ca-8490-56650e67b6f8",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19891544"
+	},
+	"item": [
+		{
+			"name": "202.API token 발급",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_key",
+						"value": "d49332bf876d49989a143b5da54dd096",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\nfrom_sys_cd : eCRM\r\nuser_id : 123456\r\n}"
+				},
+				"url": {
+					"raw": "https://dv-dlmsuprapi.lge.com/api/v1/cm/auth/access-token?from_sys_cd=eCRM&user_id=123456",
+					"protocol": "https",
+					"host": [
+						"dv-dlmsuprapi",
+						"lge",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cm",
+						"auth",
+						"access-token"
+					],
+					"query": [
+						{
+							"key": "from_sys_cd",
+							"value": "eCRM"
+						},
+						{
+							"key": "user_id",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "201.DLMS 공통코드 상세 제공",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySW5mbyI6ImVDUk18ZDQ5MzMyYmY4NzZkNDk5ODlhMTQzYjVkYTU0ZGQwOTYiLCJpYXQiOjE2NTgyODQ3NTksImV4cCI6MTY1ODI4NTk1OX0.pAsc2WVuKcqkWk9eyYsFZg-9H_RwCI4z7esUbbsfEIA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\nfrom_sys_cd : eCRM\r\nuser_id : 123456\r\n}"
+				},
+				"url": {
+					"raw": "https://dv-dlmsuprapi.lge.com/api/v1/cm/common-code-detail?from_sys_cd=eCRM&user_id=123456",
+					"protocol": "https",
+					"host": [
+						"dv-dlmsuprapi",
+						"lge",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cm",
+						"common-code-detail"
+					],
+					"query": [
+						{
+							"key": "from_sys_cd",
+							"value": "eCRM"
+						},
+						{
+							"key": "user_id",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "160. 데이터 활용 이력 저장",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySW5mbyI6ImVDUk18ZDQ5MzMyYmY4NzZkNDk5ODlhMTQzYjVkYTU0ZGQwOTYiLCJpYXQiOjE2NTgyODQ3NTksImV4cCI6MTY1ODM3MTE1OX0.t2pLG0g7CEeOgus-Vbl2V7PLVtbj9vVVKu_8VnO6Q3w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"from_sys_cd\": \"eCRM\",\r\n    \"from_transmission_datetime\": \"20211125134000\",\r\n    \"from_data_lastupdated\": \"20211015134000\",\r\n    \"user_id\": \"123456\",\r\n    \"dataset_id\": \"CSMS_M06_L0_CSMS_T0000001\",\r\n    \"dataset_major_ver\": \"0\",\r\n    \"dataset_minor_ver\": \"1\",\r\n    \"request_id\": \"1000\",\r\n    \"request_type_cd\": \"S\",\r\n    \"actual_user_id\": \"223344\",\r\n    \"usage_system_cd\": \"10003\",\r\n    \"usage_datetime\": \"20211129143000\",\r\n    \"usage_data_start_date\": \"20211029\",\r\n    \"usage_data_end_date\": \"20211129\",\r\n    \"business_function_cd\": \"RRF02\",\r\n    \"purpose_of_use1_cd\": \"USAGE_PURPOSE_DEVELOPMENT_SERVICE\",\r\n    \"purpose_of_use2_cd\": \"USAGE_PURPOSE_DEVELOPMENT_SERVICE_02\",\r\n    \"using_pattern_cd\": \"UF04\",\r\n    \"usage_data_cd\": \"UD01\",\r\n    \"items\": [\r\n    {   \r\n        \"item_cd\": \"CATEGORY_NAME\",            \r\n        \"personal_info_yn\": \"N\",            \r\n        \"pseudonym_info_yn\": \"N\"        \r\n    },\r\n    {            \r\n        \"item_cd\": \"CREATE_DT\",            \r\n        \"personal_info_yn\": \"N\",         \r\n        \"pseudonym_info_yn\": \"N\"        \r\n    },\r\n    {          \r\n        \"item_cd\": \"DEICE_ID\",            \r\n        \"personal_info_yn\": \"Y\",\r\n        \"pseudonym_info_yn\": \"N\"        \r\n    }    \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dv-dlmsuprapi.lge.com/api/v1/policy/usage-api-info?from_sys_cd=eCRM&user_id=123456",
+					"protocol": "https",
+					"host": [
+						"dv-dlmsuprapi",
+						"lge",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"policy",
+						"usage-api-info"
+					],
+					"query": [
+						{
+							"key": "from_sys_cd",
+							"value": "eCRM"
+						},
+						{
+							"key": "user_id",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "161. 제3자 제공 데이터 정보 저장",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySW5mbyI6ImVDUk18ZDQ5MzMyYmY4NzZkNDk5ODlhMTQzYjVkYTU0ZGQwOTYiLCJpYXQiOjE2NTgyODQ3NTksImV4cCI6MTY1ODM3MTE1OX0.t2pLG0g7CEeOgus-Vbl2V7PLVtbj9vVVKu_8VnO6Q3w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from_sys_cd\": \"eCRM\",\r\n    \"from_transmission_datetime\": \"20211125134000\",\r\n    \"from_data_lastupdated\": \"20211015134000\",\r\n    \"user_id\": \"123456\",\r\n    \"dataset_id\": \"CU_DD_0000006\",\r\n    \"dataset_major_ver\": \"0\",\r\n    \"dataset_minor_ver\": \"1\",\r\n    \"request_id\": \"1000\",\r\n    \"usage_system_cd\": \"10003\",\r\n    \"third_usage_name\": \"제3자활용처_테스트1\",\r\n    \"third_delivery_date\": \"20220222\",\r\n    \"third_usage_expire_date\": \"20220224\",\r\n    \"forwarder_user_id\": \"131313\",\r\n    \"items\":\r\n     [\r\n             {\r\n                \"item_cd\": \"CATEGORY_NAME\",\r\n                \"personal_info_yn\": \"N\",\r\n                \"pseudonym_info_yn\": \"N\"\r\n            },\r\n            {\r\n                \"item_cd\": \"CREATE_DT\",\r\n                \"personal_info_yn\": \"N\",\r\n                \"pseudonym_info_yn\": \"N\"\r\n            },\r\n            {\r\n                \"item_cd\": \"DEICE_ID\",\r\n                \"personal_info_yn\": \"Y\",\r\n                \"pseudonym_info_yn\": \"N\"\r\n            }\r\n            ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dv-dlmsuprapi.lge.com/api/v1/policy/third-usage-info?from_sys_cd=eCRM&user_id=123456",
+					"protocol": "https",
+					"host": [
+						"dv-dlmsuprapi",
+						"lge",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"policy",
+						"third-usage-info"
+					],
+					"query": [
+						{
+							"key": "from_sys_cd",
+							"value": "eCRM"
+						},
+						{
+							"key": "user_id",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "162. 제3자 제공 데이터 폐기 확인 정보 저장",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySW5mbyI6ImVDUk18ZDQ5MzMyYmY4NzZkNDk5ODlhMTQzYjVkYTU0ZGQwOTYiLCJpYXQiOjE2NTgyODQ3NTksImV4cCI6MTY1ODM3MTE1OX0.t2pLG0g7CEeOgus-Vbl2V7PLVtbj9vVVKu_8VnO6Q3w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"from_sys_cd\" : \"eCRM\",\r\n        \"from_transmission_datetime\" : \"20211125134000\",\r\n        \"from_data_lastupdated\" : \"20211015134000\",\r\n        \"user_id\" : \"123456\",\r\n        \"dataset_id\" : \"DD_PDT_10288_C\",\r\n        \"dataset_major_ver\" : \"0\",\r\n        \"dataset_minor_ver\" : \"1\",\r\n        \"request_id\" : \"1000\",\r\n        \"usage_system_cd\" : \"10003\",\r\n        \"third_usage_name\" : \"제3자활용처_테스트1\",\r\n        \"third_delivery_date\" : \"20220222\",\r\n        \"third_usage_expire_date\" : \"20220224\",\r\n        \"disposal_user_id\" : \"242424\",\r\n        \"expire_confirm_status_cd\" : \"COMPLETED\",\r\n        \"expire_confirm_date\" : \"20220225\",\r\n        \"items\" : \r\n        [\r\n            {\r\n                \"item_cd\" : \"CATEGORY_NAME\",\r\n                \"personal_info_yn\" : \"N\",\r\n                \"pseudonym_info_yn\" : \"N\"\r\n            },\r\n            {\r\n                \"item_cd\" : \"CREATE_DT\",\r\n                \"personal_info_yn\" : \"N\",\r\n                \"pseudonym_info_yn\" : \"N\"\r\n            },\r\n            {\r\n                \"item_cd\" : \"DEICE_ID\",\r\n                \"personal_info_yn\" : \"Y\",\r\n                \"pseudonym_info_yn\" : \"N\"\r\n            }\r\n        ]\r\n    }\t",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dv-dlmsuprapi.lge.com/api/v1/policy/third-disuse-info?from_sys_cd=eCRM&user_id=123456",
+					"protocol": "https",
+					"host": [
+						"dv-dlmsuprapi",
+						"lge",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"policy",
+						"third-disuse-info"
+					],
+					"query": [
+						{
+							"key": "from_sys_cd",
+							"value": "eCRM"
+						},
+						{
+							"key": "user_id",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "164. 데이터 제공 중단 요청 정보 저장",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySW5mbyI6ImVDUk18ZDQ5MzMyYmY4NzZkNDk5ODlhMTQzYjVkYTU0ZGQwOTYiLCJpYXQiOjE2NTgyODQ3NTksImV4cCI6MTY1ODM3MTE1OX0.t2pLG0g7CEeOgus-Vbl2V7PLVtbj9vVVKu_8VnO6Q3w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"from_sys_cd\" : \"eCRM\",\r\n        \"from_transmission_datetime\" : \"20211125134000\",\r\n        \"from_data_lastupdated\" : \"20211015134000\",\r\n        \"user_id\" : \"123456\",\r\n        \"dataset_id\" : \"DD_PDT_10288_C\",\r\n        \"dataset_major_ver\" : \"0\",\r\n        \"dataset_minor_ver\" : \"1\",\r\n        \"request_id\" : \"1000\",\r\n        \"usage_system_cd\" : \"10067\",\r\n        \"stop_request_type_cd\" : \"DATASET\",\r\n        \"stop_datetime\" : \"20220225171000\",\r\n        \"change_reason_cd\" : \"HACKING\",\r\n        \"change_update_datetime\" : \"20220225172000\",\r\n        \"change_content\" : \"prohibition\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dv-dlmsuprapi.lge.com/api/v1/policy/download-stop?from_sys_cd=eCRM&user_id=123456",
+					"protocol": "https",
+					"host": [
+						"dv-dlmsuprapi",
+						"lge",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"policy",
+						"download-stop"
+					],
+					"query": [
+						{
+							"key": "from_sys_cd",
+							"value": "eCRM"
+						},
+						{
+							"key": "user_id",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
